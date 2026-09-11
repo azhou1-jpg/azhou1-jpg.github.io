@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alice Zhou</title>
+<meta name="description" content="Alice Zhou — personal site. Password required.">
+<meta name="author" content="Alice Zhou">
+<meta name="robots" content="noindex, nofollow">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Alice Zhou">
+<meta property="og:description" content="A personal site. You'll need the password that came with the link.">
+<meta property="og:image" content="/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Alice Zhou">
+<meta name="twitter:description" content="A personal site. You'll need the password that came with the link.">
+<meta name="twitter:image" content="/assets/og.png">
+
+<meta name="theme-color" content="#FBFAF6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131311" media="(prefers-color-scheme: dark)">
+
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="/assets/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/styles.css">
+
+<script>
+  (function () {
+    document.documentElement.classList.add('js');
+    try {
+      var t = localStorage.getItem('theme');
+      if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script>
+</head>
+
+<body class="locked">
+
+<main class="gate" id="gate">
+  <div class="wrap">
+    <p class="eyebrow">Alice Zhou &nbsp;·&nbsp; Philadelphia, PA</p>
+    <h1 class="gate-h">This one's behind <em>a password.</em></h1>
+
+    <form class="gate-form" id="gate-form" autocomplete="on">
+      <label class="gate-label" for="pw">Password</label>
+      <div class="gate-row">
+        <input class="gate-input" type="password" id="pw" name="password"
+               autocomplete="current-password" autocapitalize="off" autocorrect="off"
+               spellcheck="false" aria-describedby="gate-msg" required>
+        <button class="gate-btn" type="submit" id="gate-btn">Enter</button>
+      </div>
+      <p class="gate-msg" id="gate-msg" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="gate-foot">
+      If you have the link you probably have the password too. If not,
+      <a href="mailto:azhou1@wharton.upenn.edu">email me</a> and I'll send it over.
+    </p>
+
+    <noscript>
+      <p class="gate-foot">This page needs JavaScript to decrypt its contents. Please enable it, or email me and I'll send you a PDF instead.</p>
+    </noscript>
+  </div>
+</main>
+
+<script src="/main.js" defer></script>
+<script src="/unlock.js" defer></script>
+</body>
+</html>
