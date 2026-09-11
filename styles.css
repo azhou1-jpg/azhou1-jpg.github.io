@@ -105,7 +105,9 @@ body {
   align-items: center;
   padding: 4rem 0;
 }
-.gate .wrap { max-width: 34rem; }
+/* .wrap is a flex item here, so it needs an explicit width or it shrinks
+   to min-content and overflows narrow viewports. */
+.gate .wrap { width: 100%; min-width: 0; max-width: 34rem; }
 
 .gate-h {
   font-family: var(--serif);
